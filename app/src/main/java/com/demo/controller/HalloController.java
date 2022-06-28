@@ -2,9 +2,11 @@ package com.demo.controller;
 
 import com.coding.grpc.hallo.HalloReq;
 import com.coding.grpc.hallo.HalloRes;
+import com.coding.grpc.hallo.HalloServiceGrpc;
 import com.demo.service.HalloClient;
 import com.demo.vo.HelloReq;
 import com.demo.vo.HelloRes;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,18 @@ public class HalloController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @GrpcClient("provider")
+    private HalloServiceGrpc.HalloServiceBlockingStub halloServiceBlockingStub;
+
+    /**
+     * grpc接口调用测试 方式一注解 @GrpcClient
+     * */
+    @PostMapping(value = "/hallo")
+    public void hallo(String name,String msg){
+        HalloRes halloRes = halloServiceBlockingStub.sayHello(HalloReq.newBuilder().setName(name).setMsg(msg).build());
+        LOGGER.info("halloRes code:{},msg:{}",halloRes.getCode(),halloRes.getMessage());
+    }
 
     /**
      * grpc接口调用测试
