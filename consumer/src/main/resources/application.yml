@@ -1,0 +1,25 @@
+grpc:
+  client:
+    #grpc 服务端 服务名
+    provider:
+      #address: 'static://127.0.0.1:6566'
+      # 通信类型
+      # plaintext | plaintext_upgrade | tls
+      negotiation-type: plaintext
+      # 是否开启保持连接（长连接）
+      enable-keep-alive: true
+      # 保持连接时长（默认20s）
+      keepAliveTimeout: 20s
+      # 没有RPC调用时是否保持连接（默认false，可禁用避免额外消耗CPU）
+      keep-alive-without-calls: true
+      # 客户端负载均衡策略(round_robin（默认）, pick_first)
+      defaultLoadBalancingPolicy: round_robin
+server:
+  port: 8989
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+    name: consumer

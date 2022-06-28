@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.coding.grpc.hallo;
+
+option java_multiple_files = true;
+option java_package = "com.coding.grpc.hallo";
+option java_outer_classname = "HalloProto";
+
+message HalloReq {//入参
+  string name = 1;
+  string msg = 2;
+}
+
+message HalloRes {//出参
+  string code = 1; //业务状态码
+  string message = 2; //异常原因
+}
+
+service HalloService {//类
+  // 可供调用的方法
+  rpc sayHello (HalloReq) returns (HalloRes);
+}

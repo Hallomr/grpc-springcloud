@@ -1,0 +1,12 @@
+grpc:
+  server:
+    port: 6566
+server:
+  port: 8988
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+    name: provider
