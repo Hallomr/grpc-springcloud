@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author olym
+ * @author 
  * @name ConsumerContorller
  * @date 2022-06-27 16:41
  */

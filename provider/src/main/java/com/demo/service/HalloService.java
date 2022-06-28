@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * grpc 外部调用接口
- * @author olym
+ * @author 
  * @name HalloService
  * @date 2022-06-27 18:40
  */

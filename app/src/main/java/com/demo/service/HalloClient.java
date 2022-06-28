@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
- * @author olym
+ * @author 
  * @name HalloClient
  * @date 2022-06-27 19:02
  */

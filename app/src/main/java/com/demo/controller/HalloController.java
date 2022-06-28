@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author olym
+ * @author 
  * @name HalloController
  * @date 2022-06-28 9:27
  */
