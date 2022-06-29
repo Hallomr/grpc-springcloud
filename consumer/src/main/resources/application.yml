@@ -2,7 +2,7 @@ grpc:
   client:
     #grpc 服务端 服务名
     provider:
-      #address: 'static://127.0.0.1:6566'
+      address: 'discovery:///provider'
       # 通信类型
       # plaintext | plaintext_upgrade | tls
       negotiation-type: plaintext
