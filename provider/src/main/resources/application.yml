@@ -1,12 +1,15 @@
 grpc:
   server:
-    port: 6566
+    port: 6567
 server:
-  port: 8988
+  port: 8989
 spring:
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8088
   application:
     name: provider

@@ -36,6 +36,17 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-grpc-adapter</artifactId>
+            <version>1.8.4</version>
+        </dependency>
+
         <!-- 引入本地jar -->
         <dependency>
             <groupId>org.example</groupId>
